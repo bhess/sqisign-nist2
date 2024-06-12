@@ -1,4 +1,5 @@
 # There are the following dependencies
+# TODO: update this picture
 #     ┌─┬──────┬─┐           ┌─┬────┬─┐            ┌─┬──────┬─┐
 #     │ ├──────┤ │           │ ├────┤ │            │ ├──────┤ │
 #     │ │Keygen│ │           │ │Sign│ │            │ │Verify│ │
