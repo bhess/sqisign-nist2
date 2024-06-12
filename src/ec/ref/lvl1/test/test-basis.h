@@ -1,7 +1,6 @@
 #ifndef TEST_BASIS_H
 #define TEST_BASIS_H
 
-#include "fp2.h"
 // Full-torsion basis for A=0 (excluding 2^f and huge prime factors)
 const uint64_t xPA_data[2][4] = {{0x7505815fb30f099e,0x89e78dbb4294c8df,0x7db9b4b1f7716d7b,0x13fcd4c87af65308},{0x93533c1017088fd4,0x6df9e398a1bb4cb1,0xc928f082be2e2b4c,0x17aa7e2906bef0af}};
 const uint64_t xQA_data[2][4] = {{0xe96336b75eb5a505,0x5640cecad0ad7b5a,0x1394f0771bc58ac1,0x18d92124656d68d9},{0xa54e8e24605754f0,0xe52de9790bbe4bb9,0x3bf9b7833f62e255,0x277a07644ec4f0e2}};
