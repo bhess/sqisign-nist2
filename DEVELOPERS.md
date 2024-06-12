@@ -9,7 +9,7 @@ The code is split into the modules below:
 - `common`: common code for AES, SHAKE, (P)RNG, memory handling. Every
   module that needs a hash function, seed expansion (e.g., KLPT),
   deterministic alea for tests, should call to this module.
-- `uintbig`: multi-precision big integers.
+- `intbig`: multi-precision big integers.
 - `gf`: GF(p^2) and GF(p) arithmetic.
 - `ec`: elliptic curves, isogenies and pairings. Everything that is
   purely finite-fieldy.
@@ -66,7 +66,7 @@ depends on the field size, but not the specific prime, then
 ### Contents of a module
 
 The leaf folders described above should arrange code as described
-below.  We use the `generic` implementation of the `uintbig` module as
+below.  We use the `generic` implementation of the `intbig` module as
 an example.
 
 ```
@@ -76,7 +76,7 @@ generic
 │   ├── bench1.c
 │   └── bench2.c
 ├── include
-│   └── uintbig.h
+│   └── intbig.h
 ├── test 
 │   ├── CmakeLists.txt
 │   ├── test1.c
@@ -93,7 +93,7 @@ where:
   `<module_name>.h`, where `<module_name>` is the name of the module.
   This header contains the public API of the module, and is the only
   header that can be included by other modules (e.g., via `#include
-  <uintbig.h>`). These files must contain extensive doxygen-formatted
+  <intbig.h>`). These files must contain extensive doxygen-formatted
   documentation describing the module, see
   [Documentation](#Documentation).
 - `bench` and `test` contain one executable per file, containing,
