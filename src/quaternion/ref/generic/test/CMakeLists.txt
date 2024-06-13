@@ -11,7 +11,11 @@ set(SOURCE_FILES_QUATERNION_GENERIC_REF_TESTS
     test_quaternions.c
 )
 add_executable(sqisign_test_quaternion ${SOURCE_FILES_QUATERNION_GENERIC_REF_TESTS})
-target_link_libraries(sqisign_test_quaternion ${LIB_INTBIG} ${LIB_QUATERNION} ${GMP} sqisign_common_sys )
+if (STANDALONE)
+    target_link_libraries(sqisign_test_quaternion ${LIB_INTBIG} ${LIB_QUATERNION} ${GMP} )
+else()
+    target_link_libraries(sqisign_test_quaternion ${LIB_INTBIG} ${LIB_QUATERNION} ${GMP} sqisign_common_sys )
+endif()
 target_include_directories(sqisign_test_quaternion PRIVATE ${INC_INTBIG} ${INC_COMMON} ${INC_QUATERNION} ${INC_PUBLIC} )
 
 # MSAN and GMP lead to false positives, see
